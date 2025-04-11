@@ -1,0 +1,7 @@
+[Unit]
+Description=Service for updating gnome weather app data via systemd timer
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+ExecStart="/usr/bin/bash" "-c" "[ $$(nmcli -g state general) = \"connected\" ] && gdbus call --session --dest=org.gnome.Weather --object-path=/org/gnome/Weather/window/1 --method=org.gtk.Actions.Activate refresh [] {}"

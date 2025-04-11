@@ -1,0 +1,10 @@
+[Unit]
+Description=Timer for update gnome weather app data
+
+[Timer]
+Persistent=yes
+OnCalendar=*:0/15:0
+RemainAfterElapse=no
+
+[Install]
+WantedBy=timers.target
