@@ -1,0 +1,89 @@
+{
+	"position": "bottom",
+	"height": 32,
+	// "width": 900,
+	"spacing": 0,
+	"margin-bottom": 0,
+
+    "modules-left": ["custom/menu", "custom/kitty", "custom/nautilus"],
+    "modules-center": ["hyprland/workspaces"],
+    "modules-right": ["tray", "pulseaudio", "hyprland/language", "clock", "battery"],
+
+	"custom/menu": {
+		"format": "\uf303",
+		"tooltip": false,
+		"on-click": "killall wofi || wofi"
+	},
+
+
+	"custom/kitty": {
+		"format": "",
+		"on-click": "exec kitty",
+		"tooltip": false
+	},
+
+	"custom/nautilus": {
+		"format": "󰉋",
+		"on-click": "exec nautilus",
+		"tooltip": false
+	},
+
+
+	"hyprland/workspaces": {
+		"format": "{icon}",
+		"on-click": "activate",
+		"format-icons": {
+			"1": "󰫍",
+			"2": "󰫍",
+			"3": "󰫍",
+			"4": "󰫍",
+			"5": "󰫍",
+			"6": "󰫍",
+			},
+		"tooltip": false,
+        "persistent_workspaces": {
+                "*": 6
+            }
+	},
+
+    "tray": {
+		"icon-size": 14,
+		"spacing": 15
+    },
+
+    "pulseaudio": {
+		"scroll-step": 5,
+		"format": "{icon}",
+		"format-muted": "",
+		"format-icons": {
+			"default": ["", "", ""]
+		},
+		"on-click": "killall pavucontrol || pavucontrol"
+	},
+
+	"hyprland/language": {
+		"format": "{}",
+		"format-en": "EN",
+		"format-ru": "RU",
+	},
+    
+	"clock": {
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format-alt": "{:%Y-%m-%d}"
+	},
+
+	"battery": {
+		"bat": "BAT1",
+		"interval": 60,
+		"states": {
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon} {capacity}%",
+		"format-icons": ["", "", "", "", ""],
+		"max-length": 25
+	},
+
+	"escape": true,
+	}
+}
