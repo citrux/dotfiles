@@ -11,9 +11,9 @@ columns=1
 ## Geometry
 width=300
 height=350
-location=top_left
+location=bottom_left
 x=10
-y=1010
+y=-50
 orientation=vertical
 halign=fill
 line_wrap=off

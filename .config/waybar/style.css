@@ -16,7 +16,7 @@ window#waybar {
 @define-color fg #f9f9f9;
 @define-color black #23252e;
 @define-color green #2BE491;
-@define-color gr #363749;
+@define-color gr #565769;
 
 #custom-menu {
 	background: @black;
@@ -46,7 +46,7 @@ window#waybar {
 }
 #workspaces button {
 	background-color: @black;
-	color: @fg;	
+	color: @gr;	
 	padding: 0 4px;
 	margin: 2px 5px 0 5px;
 	border-bottom: solid 2px #23252e;
@@ -72,7 +72,7 @@ window#waybar {
 	color: @fg;
 	padding: 0 4px;
 	margin: 2px 5px 0 5px;
-	border-bottom: solid 2px;
+	/* border-bottom: solid 2px; */
 	border-radius: 0;
 }
 #tray {
@@ -81,6 +81,12 @@ window#waybar {
 	padding: 0 4px;
 	margin: 4px 0 4px 0;
 	border-radius: 6 0 0 6;
+}
+#bluetooth {
+	background: @black;
+	color: @fg;
+	padding: 0 5px 0 5px;
+	margin: 4px 0px 4px 0;
 }
 #pulseaudio{
 	background: @black;

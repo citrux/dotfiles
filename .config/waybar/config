@@ -7,7 +7,7 @@
 
     "modules-left": ["custom/menu", "custom/kitty", "custom/nautilus"],
     "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["tray", "pulseaudio", "hyprland/language", "clock", "battery"],
+    "modules-right": ["tray", "bluetooth", "pulseaudio", "hyprland/language", "clock", "battery"],
 
 	"custom/menu": {
 		"format": "\uf303",
@@ -33,16 +33,22 @@
 		"format": "{icon}",
 		"on-click": "activate",
 		"format-icons": {
-			"1": "󰫍",
-			"2": "󰫍",
-			"3": "󰫍",
-			"4": "󰫍",
-			"5": "󰫍",
-			"6": "󰫍",
+			"1": "\uf444",
+			"2": "\uf444",
+			"3": "\uf444",
+			"4": "\uf444",
+			"5": "\uf444",
+			"6": "\uf444",
 			},
 		"tooltip": false,
-        "persistent_workspaces": {
-                "*": 6
+		"sort-by-number": true,
+        "persistent-workspaces": {
+                "1": [], 
+                "2": [], 
+                "3": [], 
+                "4": [], 
+                "5": [], 
+                "6": [] 
             }
 	},
 
@@ -50,6 +56,11 @@
 		"icon-size": 14,
 		"spacing": 15
     },
+
+	"bluetooth": {
+		"format": "",
+		"on-click": "blueberry"
+	},
 
     "pulseaudio": {
 		"scroll-step": 5,
