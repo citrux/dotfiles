@@ -1,0 +1,7 @@
+/* #time-box { */
+    /* opacity: 0; */
+/* } */
+
+#body-revealer {
+    transition: all 1s ease 0.1s;
+}
