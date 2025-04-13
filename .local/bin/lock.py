@@ -1,5 +1,8 @@
 #!/usr/bin/env python
 
+# based on gtk4-layer-shell lockscreen example (https://github.com/wmww/gtk4-layer-shell/tree/main)
+# and pamela for user auth via pam (https://github.com/jupyterhub/pamela)
+
 from ctypes import CDLL
 
 CDLL("libgtk4-layer-shell.so")
@@ -418,6 +421,7 @@ def authenticate(
         return handle
 
 
+
 class ScreenLock:
     def __init__(self):
         self.grace_ends_at = datetime.now() + timedelta(seconds=15)
@@ -427,10 +431,11 @@ class ScreenLock:
         self.lock_instance.connect("failed", self._on_failed)
 
     def _on_locked(self, lock_instance):
-        print("Locked!")
+        pass
+        # print("Locked!")
 
     def _on_unlocked(self, lock_instance):
-        print("Unlocked!")
+        # print("Unlocked!")
         app.quit()
 
     def _on_failed(self, lock_instance):
@@ -444,13 +449,13 @@ class ScreenLock:
             authenticate(username, entry.props.text)
             GLib.idle_add(self.lock_instance.unlock)
         except PAMError as e:
-            GLib.idle_add(self.label.set_label, e.message)  # вывести в label
+            GLib.idle_add(self.label.set_label, e.message)
         GLib.idle_add(self.spinner.stop)
 
     def _on_unlock_clicked(self, entry):
         threading.Thread(target=self._authenticate, args=(entry,)).start()
 
-    def _on_mouse_motion(self, event, x, y):
+    def _on_mouse_motion(self, *args):
         if datetime.now() < self.grace_ends_at:
             self.lock_instance.unlock()
 
@@ -459,6 +464,16 @@ class ScreenLock:
             self.lock_instance.unlock()
 
     def _create_lock_window(self, monitor):
+        settings = Gtk.Settings.get_default()
+        settings.set_property("gtk-application-prefer-dark-theme", True)
+
+        css_provider = Gtk.CssProvider()
+        css_provider.load_from_string("""
+                                      picture {
+                                          filter: blur(8px);
+                                      }
+                                      """)
+        Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
         window = Gtk.Window(application=app)
 
         mouse_controller = Gtk.EventControllerMotion()
@@ -469,10 +484,19 @@ class ScreenLock:
         window.add_controller(mouse_controller)
         window.add_controller(keyboard_controller)
 
+        overlay = Gtk.Overlay()
+
         box = Gtk.Box(orientation=Gtk.Orientation.VERTICAL, spacing=10)
         box.set_halign(Gtk.Align.CENTER)
         box.set_valign(Gtk.Align.CENTER)
-        window.set_child(box)
+
+        picture = Gtk.Picture()
+        picture.set_filename("/home/citrux/Pictures/wallpaper.jpg")
+        picture.set_content_fit(Gtk.ContentFit.COVER)
+
+        overlay.add_overlay(picture)
+        overlay.add_overlay(box)
+        window.set_child(overlay)
 
         hbox = Gtk.Box(orientation=Gtk.Orientation.HORIZONTAL, spacing=10)
         box.append(hbox)
