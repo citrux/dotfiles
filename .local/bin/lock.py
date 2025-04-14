@@ -472,6 +472,10 @@ class ScreenLock:
                                       picture {
                                           filter: blur(8px);
                                       }
+
+                                      entry.password {
+                                          background: rgba(0,0,0,0.5);
+                                      }
                                       """)
         Gtk.StyleContext.add_provider_for_display(Gdk.Display.get_default(), css_provider, Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION)
         window = Gtk.Window(application=app)
@@ -503,6 +507,8 @@ class ScreenLock:
 
         self.entry = Gtk.PasswordEntry()
         self.entry.props.show_peek_icon = True
+        self.entry.props.placeholder_text = "Enter Password"
+        self.entry.set_size_request(250, -1)
         self.entry.connect("activate", self._on_unlock_clicked)
         hbox.append(self.entry)
 
