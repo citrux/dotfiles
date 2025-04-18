@@ -233,6 +233,7 @@
           "replace_newest": true
         }
       ],
+      "ctrl-.": ["editor::ToggleComments", { "advance_downwards": false }],
       "ctrl-k ctrl-cyrillic_sha": "editor::Hover",
       "ctrl-cyrillic_ghe": "editor::UndoSelection",
       "ctrl-shift-cyrillic_ghe": "editor::RedoSelection",
