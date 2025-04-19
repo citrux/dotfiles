@@ -391,7 +391,7 @@
     "context": "AgentPanel",
     "bindings": {
       "ctrl-cyrillic_te": "agent::NewThread",
-      "ctrl-alt-cyrillic_te": "agent::NewPromptEditor",
+      // "ctrl-alt-cyrillic_te": "agent::NewPromptEditor",
       "ctrl-shift-cyrillic_er": "agent::OpenHistory",
       "ctrl-alt-cyrillic_es": "agent::OpenConfiguration",
       "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
@@ -410,7 +410,7 @@
     "context": "AgentPanel && prompt_editor",
     "use_key_equivalents": true,
     "bindings": {
-      "cmd-cyrillic_te": "agent::NewPromptEditor",
+      // "cmd-cyrillic_te": "agent::NewPromptEditor",
       "cmd-alt-cyrillic_ie": "agent::NewThread"
     }
   },
