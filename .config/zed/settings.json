@@ -34,4 +34,7 @@
   "soft_wrap": "preferred_line_length",
   "preferred_line_length": 120,
   "format_on_save": "off",
+  "file_types": {
+    "Python": ["Deployerfile"]
+  }
 }
