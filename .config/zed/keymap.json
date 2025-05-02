@@ -43,7 +43,7 @@
       "ctrl-cyrillic_zhe": "editor::ToggleLineNumbers",
       "ctrl-cyrillic_e": "editor::ToggleSelectedDiffHunks",
       "ctrl-cyrillic_sha": "editor::ShowSignatureHelp",
-      "alt-g cyrillic_i": "editor::ToggleGitBlame",
+      "alt-g cyrillic_i": "git::Blame",
       "ctrl-shift-cyrillic_u": "editor::ToggleEditPrediction"
     }
   },
@@ -102,16 +102,8 @@
       "ctrl-cyrillic_pe": "search::SelectNextMatch",
       "ctrl-shift-cyrillic_pe": "search::SelectPreviousMatch",
       "ctrl-k cyrillic_er": "assistant::DeployHistory",
-      "ctrl-k cyrillic_de": "assistant::OpenPromptLibrary",
       "ctrl-cyrillic_ie": "assistant::NewChat",
       "ctrl-cyrillic_te": "assistant::NewChat"
-    }
-  },
-  {
-    "context": "PromptLibrary",
-    "bindings": {
-      "ctrl-cyrillic_te": "prompt_library::NewPrompt",
-      "ctrl-shift-cyrillic_yeru": "prompt_library::ToggleDefaultPrompt"
     }
   },
   {
@@ -244,7 +236,7 @@
       "ctrl-k ctrl-cyrillic_o": "editor::UnfoldAll",
       "ctrl-cyrillic_yu": "editor::ToggleCodeActions",
       "ctrl-k cyrillic_ka": "editor::RevealInFileManager",
-      "ctrl-k cyrillic_ze": "editor::CopyPath",
+      "ctrl-k cyrillic_ze": "workspace::CopyPath",
       "ctrl-k cyrillic_em": "markdown::OpenPreviewToTheSide",
       "ctrl-shift-cyrillic_em": "markdown::OpenPreview",
       "ctrl-alt-shift-cyrillic_es": "editor::DisplayCursorNames",
@@ -264,7 +256,7 @@
     "bindings": {
       "alt-ctrl-cyrillic_shcha": "projects::OpenRecent",
       "alt-ctrl-shift-cyrillic_shcha": "projects::OpenRemote",
-      "alt-ctrl-shift-cyrillic_i": "branches::OpenRecent",
+      "alt-ctrl-shift-cyrillic_i": "git::Branch",
       "ctrl-cyrillic_yeru": "workspace::Save",
       "ctrl-k cyrillic_yeru": "workspace::SaveWithoutFormat",
       "ctrl-shift-cyrillic_yeru": "workspace::SaveAs",
@@ -454,7 +446,7 @@
   {
     "context": "OutlinePanel && not_editing",
     "bindings": {
-      "ctrl-alt-cyrillic_es": "outline_panel::CopyPath",
+      "ctrl-alt-cyrillic_es": "workspace::CopyPath",
       "alt-ctrl-shift-cyrillic_es": "workspace::CopyRelativePath",
       "alt-ctrl-cyrillic_ka": "outline_panel::RevealInFileManager"
     }
@@ -467,7 +459,7 @@
       "ctrl-cyrillic_che": "project_panel::Cut",
       "ctrl-cyrillic_es": "project_panel::Copy",
       "ctrl-cyrillic_em": "project_panel::Paste",
-      "ctrl-alt-cyrillic_es": "project_panel::CopyPath",
+      "ctrl-alt-cyrillic_es": "workspace::CopyPath",
       "alt-ctrl-shift-cyrillic_es": "workspace::CopyRelativePath",
       "alt-ctrl-cyrillic_ka": "project_panel::RevealInFileManager",
       "ctrl-shift-cyrillic_a": "project_panel::NewSearchInDirectory"
