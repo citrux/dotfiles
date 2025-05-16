@@ -101,9 +101,9 @@
       "ctrl-shift-cyrillic_u": "project_panel::ToggleFocus",
       "ctrl-cyrillic_pe": "search::SelectNextMatch",
       "ctrl-shift-cyrillic_pe": "search::SelectPreviousMatch",
-      "ctrl-k cyrillic_er": "assistant::DeployHistory",
-      "ctrl-cyrillic_ie": "assistant::NewChat",
-      "ctrl-cyrillic_te": "assistant::NewChat"
+      // "ctrl-k cyrillic_er": "assistant::DeployHistory",
+      // "ctrl-cyrillic_ie": "assistant::NewChat",
+      // "ctrl-cyrillic_te": "assistant::NewChat"
     }
   },
   {
@@ -388,7 +388,7 @@
       "ctrl-alt-cyrillic_es": "agent::OpenConfiguration",
       "ctrl-cyrillic_sha": "agent::ToggleProfileSelector",
       "ctrl-shift-cyrillic_ef": "agent::ToggleContextPicker",
-      "ctrl-cyrillic_u": "agent::ChatMode",
+      // "ctrl-cyrillic_u": "agent::ChatMode",
       "ctrl-alt-cyrillic_u": "agent::RemoveAllContext"
     }
   },
@@ -434,8 +434,8 @@
   {
     "context": "PromptEditor",
     "bindings": {
-      "ctrl-cyrillic_ha": "assistant::CyclePreviousInlineAssist",
-      "ctrl-cyrillic_hardsign": "assistant::CycleNextInlineAssist",
+      // "ctrl-cyrillic_ha": "assistant::CyclePreviousInlineAssist",
+      // "ctrl-cyrillic_hardsign": "assistant::CycleNextInlineAssist",
       "ctrl-alt-cyrillic_u": "agent::RemoveAllContext"
     }
   },

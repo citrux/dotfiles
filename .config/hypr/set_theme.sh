@@ -6,13 +6,13 @@ function set_theme() {
     "dark")
       gsettings set org.gnome.desktop.interface color-scheme prefer-dark
       gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3-dark
-      kitty +kitten themes --reload-in=all Catppuccin-Macchiato
+      kitty +kitten themes --reload-in=all --config-file-name=theme.conf Catppuccin-Macchiato
       sed -i 's/\(theme = "\)\w\+\("\)/\1catppuccin_macchiato\2/' $XDG_CONFIG_HOME/helix/config.toml && pkill -USR1 helix 
       ;;
     "light")
       gsettings set org.gnome.desktop.interface color-scheme default
       gsettings set org.gnome.desktop.interface gtk-theme adw-gtk3
-      kitty +kitten themes --reload-in=all Catppuccin-Latte
+      kitty +kitten themes --reload-in=all --config-file-name=theme.conf Catppuccin-Latte
       sed -i 's/\(theme = "\)\w\+\("\)/\1catppuccin_latte\2/' $XDG_CONFIG_HOME/helix/config.toml && pkill -USR1 helix 
       ;;
     *)
