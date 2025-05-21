@@ -41,7 +41,15 @@
   },
   "languages": {
           "Python": {
-              "language_servers": ["ruff"]
+              "language_servers": ["ty", "ruff"]
           }
+  },
+  "lsp": {
+    "ty": {
+      "binary": {
+        "path": "/usr/bin/ty",
+        "arguments": ["server"]
+      }
+    }
   }
 }
