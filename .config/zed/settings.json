@@ -41,10 +41,21 @@
   },
   "languages": {
           "Python": {
-              "language_servers": ["ty", "ruff"]
+              "language_servers": ["ty", "ruff", "pyright"]
           }
   },
   "lsp": {
+    "pyright": {
+          "settings": {
+            "python": {
+              "pythonPath": ".venv/bin/python"
+            },
+            "python.analysis": {
+              "diagnosticMode": "workspace",
+              "typeCheckingMode": "off"
+            }
+          }
+    },
     "ty": {
       "binary": {
         "path": "/usr/bin/ty",
